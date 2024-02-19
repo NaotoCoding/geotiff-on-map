@@ -1,7 +1,7 @@
 'use client'
 
 import { MapContainer, TileLayer } from "react-leaflet"
-import GeotiffLayer from "./_components/leaflet/child_components/GeotiffLayer"
+import GeotiffLayer from "./_components/leaflet/GeotiffLayer"
 import 'leaflet/dist/leaflet.css'
 
 const Home = () => {
