@@ -1,7 +1,7 @@
 import { fromUrl } from 'geotiff'
 import Geotiff from '../_types/Geotiff'
 
-const loadGeotiff = async (geotiffPath: string): Promise<Geotiff> => {
+const LoadGeotiff = async (geotiffPath: string): Promise<Geotiff> => {
   const tiff = await fromUrl(geotiffPath)
   const image = await tiff.getImage()
   const rasters = await image.readRasters()
@@ -22,4 +22,4 @@ const loadGeotiff = async (geotiffPath: string): Promise<Geotiff> => {
   }
 }
 
-export default loadGeotiff
+export default LoadGeotiff

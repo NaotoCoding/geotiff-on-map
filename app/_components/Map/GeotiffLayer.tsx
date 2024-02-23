@@ -1,6 +1,6 @@
 'use client'
 
-import loadGeotiff from "@/app/_utils/loadGeotiff"
+import LoadGeotiff from "@/app/_utils/LoadGeotiff"
 import { useMap } from "react-leaflet"
 import L, { Map } from "leaflet"
 import Geotiff from "@/app/_types/Geotiff"
@@ -46,7 +46,7 @@ const GeotiffLayer = (props: { geotiffPath: string }) => {
 
   useEffect(() => {
     (async() => {
-      const geotiff = await loadGeotiff(props.geotiffPath)
+      const geotiff = await LoadGeotiff(props.geotiffPath)
       map.panTo(geotiff.coordinates.center)
       putGeotiffCanvasOnLeaflet(map, geotiff)
     })()
